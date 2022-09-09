@@ -3,7 +3,7 @@ import "./form";
 import "./submit";
 
 // IMPORT DATABASE
-import { initdb } from './database';
+import { initdb, getDb, postDb } from './database';
 
 // IMPORT IMAGES
 import Logo from '../images/logo.png';
@@ -12,6 +12,9 @@ import Dog from '../images/dog.png';
 
 window.addEventListener('load', function () {
   initdb();
+  // getDb();
+  // postDb("Lernantino", "learnantino@test.com", 8186601234, "Bear");
+  // getDb();
   document.getElementById('logo').src = Logo;
   document.getElementById('bearThumbnail').src = Bear;
   document.getElementById('dogThumbnail').src = Dog;
