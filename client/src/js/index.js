@@ -2,7 +2,7 @@
 import "./form";
 
 // IMPORT DATABASE
-import { initdb, getDb, postDb } from "./database";
+import { initdb, getDb, postDb, deleteDb } from "./database";
 
 // IMPORT IMAGES
 import Logo from "../images/logo.png";
@@ -58,6 +58,16 @@ form.addEventListener("submit", (event) => {
   // Reload the DOM
   fetchCards();
 });
+
+// DELETE CARD FUNTIONALITY
+window.deleteCard = (e) => {
+  // Grabs the id from the button element attached to the contact card
+  let id = parseInt(e.id);
+  // Delete the card
+  deleteDb(id);
+  // Reload the DOM
+  fetchCards();
+};
 
 // IMPORT CSS FILES & BOOTSTRAP
 import "../css/index.css";
